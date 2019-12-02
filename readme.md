@@ -1,1 +1,1 @@
-## Le pythong game engine
+## Le rustic, experimental, base template for pygames python game engine

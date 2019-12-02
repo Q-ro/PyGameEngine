@@ -1,8 +1,10 @@
 '''
 Author: Andres Mrad (Q-ro)
-Date: Tuesday/November/2019 @ 16:58:50
-Description:  A simple OOP game engine for python using pygames 
+Date: Tuesday 19/November/2019 @ 16:58:50
+Description: A simple OOP game engine for python using pygames 
 '''
+
+
 
 from ball import Ball  #Add the ball class
 import pygame
