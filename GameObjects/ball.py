@@ -5,9 +5,10 @@ Description:  A ball game object
 '''
 
 from pygame.locals import *
+from GameObjects.baseGameObject import BaseGameObject 
 
 
-class Ball:
+class Ball(BaseGameObject):
     pos = 0  # The ball's current position
     ball = 0  # The ball's image
     ballrect = 0  # The ball bounding box
@@ -21,6 +22,10 @@ class Ball:
         self.speed = speed
         self.xBound = xBound
         self.yBound = yBound
+
+    def on_loop(self):
+        self.ball.moveBall()
+        pass
 
     def moveBall(self):
         self.ballrect = self.ballrect.move(self.speed)
