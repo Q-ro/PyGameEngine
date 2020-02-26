@@ -22,7 +22,7 @@ class MenuScene(SceneBase):
         backgroundColor = 0, 1, 1
         SceneBase.__init__(self, backgroundColor, 0, width, height)
         font = pygame.font.Font('freesansbold.ttf', 32)
-        self.text = font.render('Press start you fuck ! ', True, self.green,
+        self.text = font.render(self.textToDisplay, True, self.green,
                                 self.blue)
         self.textRect = self.text.get_rect()
 
