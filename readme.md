@@ -5,4 +5,6 @@ An attempt at making pygame more robust and more game engine like, with features
 ### Future Milestones (?)
 [ ] Maybe a GUI for easy scene and game object creation ?
 [ ] Make game objects more flexible
-[ ] Improbe object inheritence and polymorphism ?
+[ ] Improve object inheritence and polymorphism ?
+[ ] Make a custom dictionary for different custom events so accesing them is easier ?
+

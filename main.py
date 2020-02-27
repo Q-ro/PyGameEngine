@@ -5,21 +5,16 @@ Description: A simple OOP game engine for python using pygames
 '''
 
 import pygame
+from events.customEvents import CUSTOM_EVENTS_DIC
 from Scenes.ballScene import BallScene
 from Scenes.menuScene import MenuScene
 
 
 class App:
-    # PLAYERDEAD = USEREVENT+2
-    # creating the event
-    # CATONKEYBOARD = pygame.USEREVENT+1
-    # my_event = pygame.event.Event(CATONKEYBOARD, message="Bad cat!")
-    # pygame.event.post(my_event)
-    # CHANGE_SCENE_EVENT = pygame.USEREVENT+1 # A custome event that let's the program know what scene to switch to
     _scenes = []  # A list containing all the game scenes
     _currentScene = 0  # the scene being currently displayed
-    _currentSceneIndex = 0  # the scene being currently displayed
-    _display_surf = None
+    _currentSceneIndex = 0  # The scene being currently displayed
+    _display_surf = None # The pygame display surface to be used by the program for rendering
 
     def __init__(self):
         self._running = True
@@ -48,7 +43,7 @@ class App:
         if (event.type == pygame.QUIT) or (keys[pygame.K_ESCAPE]):
             self._running = False
 
-        if event.type == pygame.USEREVENT + 1:
+        if event.type ==  CUSTOM_EVENTS_DIC['CHANGE_SCENE_EVENT']:
             self.on_change_scene(event.sceneIndex)
 
         self._currentScene.on_event(event, pygame)
